@@ -1,20 +1,50 @@
 {
+  "name": "audiophile-ecommerce",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@radix-ui/react-radio-group": "^1.1.2",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/http-errors": "^2.0.1",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.1",
+    "@vercel/analytics": "^1.0.1",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "formik": "^2.2.9",
+    "fs": "^0.0.1-security",
+    "http-errors": "^2.0.0",
+    "micro": "^10.0.1",
+    "mongoose": "^7.1.0",
+    "next": "13.3.1",
+    "next-auth": "^4.22.1",
+    "next-connect": "^0.13.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-redux": "^8.0.5",
+    "redux-persist": "^6.0.0",
+    "stripe": "^12.3.0",
+    "styled-components": "^5.3.10",
+    "typescript": "5.0.4",
+    "validator": "^13.9.0",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "typescript": "^4.8.3"
+    "@types/bcrypt": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/styled-components": "^5.1.26",
+    "@types/validator": "^13.7.15"
   }
 }
