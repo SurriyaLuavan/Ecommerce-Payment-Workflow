@@ -6,7 +6,6 @@ import ProductsList from "@/components/category/ProductsList";
 import axios from "axios";
 import CategoryHeader from "@/components/category/CategoryHeader";
 import {CategoryPageProps} from "@/interfaces/interfaces";
-import {API_URL} from "@/config";
 
 function Category({products, categories, currentCategory}: CategoryPageProps) {
 
@@ -23,7 +22,7 @@ function Category({products, categories, currentCategory}: CategoryPageProps) {
 export default Category
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const res = await axios.get(`${API_URL}/api/products`)
+    const res = await axios.get(`${process.env.API_URL}/api/products`)
         .then((res) => {
             return res.data
         }).catch((err) => {
@@ -40,7 +39,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-    const res = await axios.get(`${API_URL}/api/products`)
+    const res = await axios.get(`${process.env.API_URL}/api/products`)
         .then((res) => {
             return res.data
         }).catch((err) => {

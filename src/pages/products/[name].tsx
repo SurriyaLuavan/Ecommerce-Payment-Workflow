@@ -13,7 +13,6 @@ import QuantityControl from "@/components/product/QuantityControl";
 import {useEffect, useState} from "react";
 import GoBackButton from "@/components/shared/GoBackButton";
 import dynamic from "next/dynamic";
-import {API_URL} from "@/config";
 import useWidth from "@/utils/hooks/useWidth";
 
 const ProductSection = styled.section`
@@ -252,7 +251,7 @@ function Product({categories, product, products}: ProductPageProps) {
 export default Product
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-    const res = await axios.get(`${API_URL}/api/products`)
+    const res = await axios.get(`${process.env.API_URL}/api/products`)
         .then((res) => {
             return res.data
         }).catch((err) => {
@@ -271,7 +270,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
     }
 }
 export const getStaticPaths: GetStaticPaths = async () => {
-    const res = await axios.get(`${API_URL}/api/products`)
+    const res = await axios.get(`${process.env.API_URL}/api/products`)
         .then((res) => {
             return res.data
         }).catch((err) => {
