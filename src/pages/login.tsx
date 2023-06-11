@@ -6,7 +6,7 @@ import RegisterForm from "@/components/login/RegisterForm";
 import LoginForm from "@/components/login/LoginForm";
 import { useRouter } from "next/router";
 import { getSession, useSession } from "next-auth/react";
-import { InfinitySpin } from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 
 const LoginSection = styled.section`
   @media (min-width: 768px) {
@@ -55,8 +55,8 @@ function LoginPage() {
     <MainLayout>
       {isLoading ? (
         <LoadingWrapper>
-          <InfinitySpin
-            width="200"
+          <ThreeDots
+            width="50"
             color="#d87d4a"
           />
         </LoadingWrapper>
